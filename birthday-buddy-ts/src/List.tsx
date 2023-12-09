@@ -1,6 +1,7 @@
 import { PeopleProps } from "./App";
 
-const List = ({ id, name, image, age }: PeopleProps) => {
+const List = ({ ...person }: PeopleProps) => {
+  const { id, name, image, age } = person;
   return (
     <article key={id} className='person'>
       <img src={image} alt={name} />
